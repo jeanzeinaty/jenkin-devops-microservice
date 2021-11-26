@@ -2,9 +2,8 @@ pipeline {
 	//agent any
 	agent { 
 		docker { 
-			image 'maven:3.6.3' 
-			//label 'my-defined-label'
-        	args  '-v /tmp:/tmp'
+			image 'maven:3.6.3'
+			args '-u root:root'
 		} 
 	}
 	stages {
